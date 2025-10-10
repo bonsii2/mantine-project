@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { Button, Title, Container } from "@mantine/core";
 import { ThemeToggle } from "./components/ThemeToggle";
 import Demo from "./components/Demo";
@@ -13,6 +13,7 @@ export default function HomePage() {
       </Button>
       <ThemeToggle/>
       <Demo />
+      <Link href={'/appshell'}>App shale</Link>
     </Container>
   );
 }
