@@ -3,7 +3,7 @@
 import { ActionIcon, useMantineColorScheme } from "@mantine/core";
 import { Sun, Moon } from "lucide-react";
 
-export function ThemeToggle() {
+export default function ThemeToggle() {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
 
   return (
