@@ -1,8 +1,12 @@
 "use client";
 import Link from "next/link";
-import { Button, Title, Container, Paper, Group,Text, Divider } from "@mantine/core";
+import { Button, Title, Container, Paper, Group,Text,  Divider } from "@mantine/core";
 import  ThemeToggle  from "@/app/components/ThemeToggle";
 import Demo from "./components/Demo";
+import { Icon } from "lucide-react";
+import { ActionIcon,  } from "@mantine/core";
+
+
 
 export default function HomePage() {
   return (
@@ -13,21 +17,40 @@ export default function HomePage() {
       </Button>
       <Divider label="Details" labelPosition="center" my="sm" />
 
-      <Paper withBorder radius="md" p="md" shadow="sm" component="article">
-        <Group align="center">
-          <Text fw={700}>title</Text>
-          <Divider orientation="vertical" mx="sm" aria-orientation="vertical"/>
-          <Text c="dimmed">$price</Text>
-        </Group>
+      <Group>
+        <Button color="blue" radius="md">
+          default
+        </Button>
+        <Button color="blue" variant="outline" radius="md">
+          add item
+        </Button>
+        <Button color="red" variant="teal" radius="md">
+          add item
+        </Button>
+        <Button
+          color="red"
+          radius="md"
+          rightSection={"text"}
+          onClick={() => alert("how are you bonsa")}
+        >
+          delete
+        </Button>
 
-        <Text size="sm" color="dimmed" mt="sm">
-          text
-        </Text>
+        <Button loading>savin..g</Button>
+      </Group>
+      <Group>
+        <ActionIcon color="blue" variant="filled" aria-label="Edit">
+         E
+        </ActionIcon>
 
-        <Group mt="md">
-          <Button size="sm">Buy</Button>
-        </Group>
-      </Paper>
+        <ActionIcon color="red" variant="light" aria-label="Delete">
+          x
+        </ActionIcon>
+
+        <ActionIcon variant="subtle" aria-label="Settings">
+          s
+        </ActionIcon>
+      </Group>
 
       <ThemeToggle />
       <Demo />
