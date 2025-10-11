@@ -10,6 +10,7 @@ import {
   MantineProvider,
   ColorSchemeScript,
   Space,
+  
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import ThemeToggle from "./components/ThemeToggle";
@@ -19,6 +20,7 @@ import { Children } from "react";
 import Bounced from '@/app/bounced/page'
 import Modals from '@/app/modals/page'
 import Drawer from "@/app/Drawer/page";
+import LoadingOverlay from '@/app/overlayLoading/page'
 export default function DemoAppShell() {
   const [opened, { toggle }] = useDisclosure();
 
@@ -66,6 +68,8 @@ export default function DemoAppShell() {
                 <Modals />
                 <Space h={"md"} w={"md"} />
                 <Drawer />
+                <Space h={"md"} w={"md"} />
+                <LoadingOverlay />
               </ScrollArea>
             </AppShell.Main>
           </AppShell>
