@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@mantine/core": "^8.3.4",
+    "@mantine/form": "^8.3.4",
     "@mantine/hooks": "^8.3.4",
     "@mantine/next": "^6.0.22",
     "lucide-react": "^0.545.0",

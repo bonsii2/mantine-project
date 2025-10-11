@@ -20,7 +20,7 @@ export default function HomePage() {
       <Group>
         <Button color="blue" radius="md">
           default
-        </Button>
+        </Button>git
         <Button color="blue" variant="outline" radius="md">
           add item
         </Button>
