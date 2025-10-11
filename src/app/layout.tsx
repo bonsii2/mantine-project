@@ -13,8 +13,9 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import ThemeToggle from "./components/ThemeToggle";
 import HomePage from "./page";
-
-
+import FormPage from '@/app/formPage/page'
+import { Children } from "react";
+import Bounced from '@/app/bounced/page'
 export default function DemoAppShell() {
   const [opened, { toggle }] = useDisclosure();
 
@@ -57,7 +58,7 @@ export default function DemoAppShell() {
             {/* Main content */}
             <AppShell.Main>
               <ScrollArea>
-                <HomePage/>
+                <Bounced />
               </ScrollArea>
             </AppShell.Main>
           </AppShell>

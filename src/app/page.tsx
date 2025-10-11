@@ -1,4 +1,4 @@
-"use client";
+
 import Link from "next/link";
 import { Button, Title, Container, Paper, Group,Text,  Divider } from "@mantine/core";
 import  ThemeToggle  from "@/app/components/ThemeToggle";
@@ -63,10 +63,10 @@ export default function HomePage() {
           </Button>
         </Group>
       </Paper>
-
-      <ThemeToggle />
       <Demo />
       <Link href={"/appshell"}>App shale</Link>
+      <Link href={'/formPage'}>form page</Link>
+      <Link href={'/bounced'}>bounced</Link>
     </Container>
   );
 }

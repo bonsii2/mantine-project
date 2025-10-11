@@ -1,5 +1,5 @@
 // components/RegisterForm.tsx
-"use client";
+// "use client";
 
 import React from "react";
 import { useForm } from "@mantine/form";
@@ -28,7 +28,7 @@ type FormValues = {
   avatar?: File | null;
 };
 
-export default function RegisterForm() {
+export default function Page() {
   const form = useForm<FormValues>({
     initialValues: {
       name: "",
@@ -68,7 +68,7 @@ export default function RegisterForm() {
   }
 
   return (
-    <Paper p="lg" radius="md" withBorder>
+    <Paper p="lg" radius="md" withBorder shadow="xl" >
       <Title order={3} mb="md">
         Register
       </Title>
