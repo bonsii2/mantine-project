@@ -21,6 +21,7 @@ import Bounced from '@/app/bounced/page'
 import Modals from '@/app/modals/page'
 import Drawer from "@/app/Drawer/page";
 import LoadingOverlay from '@/app/overlayLoading/page'
+import Dialog from '@/app/dialog/page'
 export default function DemoAppShell() {
   const [opened, { toggle }] = useDisclosure();
 
@@ -70,6 +71,8 @@ export default function DemoAppShell() {
                 <Drawer />
                 <Space h={"md"} w={"md"} />
                 <LoadingOverlay />
+                <Space h={"md"} w={"md"} />
+                <Dialog />
               </ScrollArea>
             </AppShell.Main>
           </AppShell>
