@@ -9,6 +9,7 @@ import {
   ScrollArea,
   MantineProvider,
   ColorSchemeScript,
+  Space,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import ThemeToggle from "./components/ThemeToggle";
@@ -16,6 +17,7 @@ import HomePage from "./page";
 import FormPage from '@/app/formPage/page'
 import { Children } from "react";
 import Bounced from '@/app/bounced/page'
+import Modals from '@/app/modals/page'
 export default function DemoAppShell() {
   const [opened, { toggle }] = useDisclosure();
 
@@ -45,7 +47,7 @@ export default function DemoAppShell() {
                   size="sm"
                 />
                 <Text fw={700}>My Mantine App</Text>
-                <ThemeToggle/>
+                <ThemeToggle />
               </Group>
             </AppShell.Header>
 
@@ -59,6 +61,8 @@ export default function DemoAppShell() {
             <AppShell.Main>
               <ScrollArea>
                 <Bounced />
+                <Space  h={'md'} w={'md'}/>
+                <Modals/>
               </ScrollArea>
             </AppShell.Main>
           </AppShell>
