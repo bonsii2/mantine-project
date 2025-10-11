@@ -4,7 +4,7 @@ import { Button, Title, Container, Paper, Group,Text,  Divider } from "@mantine/
 import  ThemeToggle  from "@/app/components/ThemeToggle";
 import Demo from "./components/Demo";
 import { Icon } from "lucide-react";
-import { ActionIcon,  } from "@mantine/core";
+import { ActionIcon, CloseButton } from "@mantine/core";
 
 
 
@@ -38,19 +38,31 @@ export default function HomePage() {
 
         <Button loading>savin..g</Button>
       </Group>
-      <Group>
-        <ActionIcon color="blue" variant="filled" aria-label="Edit">
-         E
-        </ActionIcon>
+      <Paper shadow="sm"  radius="md" p="lg" withBorder>
+        <Group justify="space-between">
+          <Text fw={600}>How to build a great UI with Mantine</Text>
+          <CloseButton aria-label="Close post" />
+        </Group>
 
-        <ActionIcon color="red" variant="light" aria-label="Delete">
-          x
-        </ActionIcon>
+        <Text mt="sm" color="dimmed" size="sm">
+          Mantine provides everything you need to build responsive UIs faster.
+        </Text>
 
-        <ActionIcon variant="subtle" aria-label="Settings">
-          s
-        </ActionIcon>
-      </Group>
+        <Group mt="md" justify="space-between">
+          <Group>
+            <ActionIcon color="red" variant="light" aria-label="Like">
+              L
+            </ActionIcon>
+            <ActionIcon variant="subtle" aria-label="Share">
+              sh
+            </ActionIcon>
+          </Group>
+
+          <Button color="blue" radius="md">
+            Read More
+          </Button>
+        </Group>
+      </Paper>
 
       <ThemeToggle />
       <Demo />
