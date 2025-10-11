@@ -18,6 +18,7 @@ import FormPage from '@/app/formPage/page'
 import { Children } from "react";
 import Bounced from '@/app/bounced/page'
 import Modals from '@/app/modals/page'
+import Drawer from "@/app/Drawer/page";
 export default function DemoAppShell() {
   const [opened, { toggle }] = useDisclosure();
 
@@ -61,8 +62,10 @@ export default function DemoAppShell() {
             <AppShell.Main>
               <ScrollArea>
                 <Bounced />
-                <Space  h={'md'} w={'md'}/>
-                <Modals/>
+                <Space h={"md"} w={"md"} />
+                <Modals />
+                <Space h={"md"} w={"md"} />
+                <Drawer />
               </ScrollArea>
             </AppShell.Main>
           </AppShell>
