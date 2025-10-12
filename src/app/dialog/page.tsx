@@ -20,7 +20,9 @@ export default function ConfirmDialog() {
           <Button variant="default" onClick={() => setOpened(false)}>
             Cancel
           </Button>
-          <Button color="red" onClick={() => alert("Deleted!")}>
+          <Button color="red" onClick={() => {alert("Deleted!")
+            setOpened(false)
+          }}>
             Delete
           </Button>
         </Group>
