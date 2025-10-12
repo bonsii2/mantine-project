@@ -22,6 +22,9 @@ import Modals from '@/app/modals/page'
 import Drawer from "@/app/Drawer/page";
 import LoadingOverlay from '@/app/overlayLoading/page'
 import Dialog from '@/app/dialog/page'
+import Overlay from '@/app/overlay/page'
+import Affix from '@/app/Affix/page'
+import FocusTrap from '@/app/focusTrap/page'
 export default function DemoAppShell() {
   const [opened, { toggle }] = useDisclosure();
 
@@ -64,6 +67,8 @@ export default function DemoAppShell() {
             {/* Main content */}
             <AppShell.Main>
               <ScrollArea>
+                <FocusTrap/>
+                <Affix />
                 <Bounced />
                 <Space h={"md"} w={"md"} />
                 <Modals />
@@ -73,6 +78,9 @@ export default function DemoAppShell() {
                 <LoadingOverlay />
                 <Space h={"md"} w={"md"} />
                 <Dialog />
+                <Space h={"md"} w={"md"} />
+                <Overlay />
+                <Space h={"md"} w={"md"} />
               </ScrollArea>
             </AppShell.Main>
           </AppShell>
