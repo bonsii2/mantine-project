@@ -1,14 +1,24 @@
-
+'use client'
 import Link from "next/link";
 import { Button, Title, Container, Paper, Group,Text,  Divider } from "@mantine/core";
 import  ThemeToggle  from "@/app/components/ThemeToggle";
 import Demo from "./components/Demo";
 import { Icon } from "lucide-react";
 import { ActionIcon, CloseButton } from "@mantine/core";
+import { notifications } from "@mantine/notifications";
 
 
 
 export default function HomePage() {
+  const handleClick = () => {
+  notifications.show({
+    title: ' success',
+    message: 'deleted succesfuly',
+    bg: 'red',
+    autoClose: 2000
+
+  })
+  }
   return (
     <Container size="sm" py="xl">
       <Title order={2}>Hello Mantine + Next.js (App Router) 👋</Title>
@@ -31,10 +41,11 @@ export default function HomePage() {
           color="red"
           radius="md"
           rightSection={"text"}
-          onClick={() => alert("how are you bonsa")}
+          onClick={handleClick}
         >
           delete
         </Button>
+        <Button onClick={handleClick}>notification</Button>
 
         <Button loading>savin..g</Button>
       </Group>

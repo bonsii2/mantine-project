@@ -1,3 +1,4 @@
+'use client'
 import { FocusTrap, TextInput, Button, Stack } from "@mantine/core";
 import { useState } from "react";
 

@@ -1,35 +1,13 @@
-"use client";
-
 import "@mantine/core/styles.css";
-import {
-  AppShell,
-  Burger,
-  Group,
-  Text,
-  ScrollArea,
-  MantineProvider,
-  ColorSchemeScript,
-  Space,
-  
-} from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import ThemeToggle from "./components/ThemeToggle";
-import HomePage from "./page";
-import FormPage from '@/app/formPage/page'
-import { Children } from "react";
-import Bounced from '@/app/bounced/page'
-import Modals from '@/app/modals/page'
-import Drawer from "@/app/Drawer/page";
-import LoadingOverlay from '@/app/overlayLoading/page'
-import Dialog from '@/app/dialog/page'
-import Overlay from '@/app/overlay/page'
-import Affix from '@/app/Affix/page'
-import FocusTrap from '@/app/focusTrap/page'
-import Tabs from '@/app/NavigationComponent/Tabs/page'
-import Pagination from '@/app/NavigationComponent/Pagination/page'
-export default function DemoAppShell() {
-  const [opened, { toggle }] = useDisclosure();
+import { MantineProvider } from "@mantine/core";
+import { Notifications } from "@mantine/notifications";
+import { ColorSchemeScript } from "@mantine/core";
 
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <head>
@@ -37,58 +15,11 @@ export default function DemoAppShell() {
       </head>
       <body>
         <MantineProvider>
-          <AppShell
-            header={{ height: 60 }}
-            navbar={{
-              width: 250,
-              breakpoint: "sm",
-              collapsed: { mobile: !opened },
-            }}
-            padding="md"
-          >
-            {/* Header */}
-            <AppShell.Header>
-              <Group h="100%" px="md">
-                <Burger
-                  opened={opened}
-                  onClick={toggle}
-                  hiddenFrom="sm"
-                  size="sm"
-                />
-                <Text fw={700}>My Mantine App</Text>
-                <ThemeToggle />
-              </Group>
-            </AppShell.Header>
-
-            {/* Navbar */}
-            <AppShell.Navbar p="md">
-              <Text>Home</Text>
-              <Text>Settings</Text>
-            </AppShell.Navbar>
-
-            {/* Main content */}
-            <AppShell.Main>
-              <ScrollArea>
-                {/* <FocusTrap />
-                <Space h={'sm'}/>
-                <Tabs />
-                <Affix />
-                <Bounced />
-                <Space h={"md"} w={"md"} />
-                <Modals />
-                <Space h={"md"} w={"md"} />
-                <Drawer />
-                <Space h={"md"} w={"md"} />
-                <LoadingOverlay />
-                <Space h={"md"} w={"md"} />
-                <Dialog />
-                <Space h={"md"} w={"md"} />
-                <Overlay />
-                <Space h={"md"} w={"md"} /> */}
-              <Pagination/>
-              </ScrollArea>
-            </AppShell.Main>
-          </AppShell>
+          <Notifications position="bottom-right"
+          limit={3}
+          containerWidth={320}
+          zIndex={99999} />
+          {children}
         </MantineProvider>
       </body>
     </html>

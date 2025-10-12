@@ -1,3 +1,4 @@
+'use client'
 import { LoadingOverlay, Button, Box } from "@mantine/core";
 import { useState } from "react";
 
