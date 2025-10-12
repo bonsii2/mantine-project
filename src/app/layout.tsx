@@ -25,6 +25,8 @@ import Dialog from '@/app/dialog/page'
 import Overlay from '@/app/overlay/page'
 import Affix from '@/app/Affix/page'
 import FocusTrap from '@/app/focusTrap/page'
+import Tabs from '@/app/NavigationComponent/Tabs/page'
+import Pagination from '@/app/NavigationComponent/Pagination/page'
 export default function DemoAppShell() {
   const [opened, { toggle }] = useDisclosure();
 
@@ -67,7 +69,9 @@ export default function DemoAppShell() {
             {/* Main content */}
             <AppShell.Main>
               <ScrollArea>
-                <FocusTrap/>
+                {/* <FocusTrap />
+                <Space h={'sm'}/>
+                <Tabs />
                 <Affix />
                 <Bounced />
                 <Space h={"md"} w={"md"} />
@@ -80,7 +84,8 @@ export default function DemoAppShell() {
                 <Dialog />
                 <Space h={"md"} w={"md"} />
                 <Overlay />
-                <Space h={"md"} w={"md"} />
+                <Space h={"md"} w={"md"} /> */}
+              <Pagination/>
               </ScrollArea>
             </AppShell.Main>
           </AppShell>

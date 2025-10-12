@@ -67,6 +67,8 @@ export default function HomePage() {
       <Link href={"/appshell"}>App shale</Link>
       <Link href={'/formPage'}>form page</Link>
       <Link href={'/bounced'}>bounced</Link>
+      <Link href={'/NavigationComponent/navBar'}>bounced</Link>
+
     </Container>
   );
 }
