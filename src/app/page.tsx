@@ -8,6 +8,7 @@ import { ActionIcon, CloseButton } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
 import  Alert  from "@/app/feedBackComponent/alert/page";
 import Loader from '@/app/feedBackComponent/Loader/page'
+import LoadingOverlay from '@/app/feedBackComponent/LoadingOverlay/page'
 
 
 export default function HomePage() {
@@ -27,7 +28,6 @@ export default function HomePage() {
         Click me
       </Button>
       <Divider label="Details" labelPosition="center" my="sm" />
-
       <Group>
         <Button color="blue" radius="md">
           default
@@ -82,6 +82,7 @@ export default function HomePage() {
       <Alert />
       <Link href={"/NavigationComponent/navBar"}>bounced</Link>
       <Loader />
+      <LoadingOverlay/>
     </Container>
   );
 }
