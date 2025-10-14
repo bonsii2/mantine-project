@@ -7,7 +7,7 @@ import { Icon } from "lucide-react";
 import { ActionIcon, CloseButton } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
 import  Alert  from "@/app/feedBackComponent/alert/page";
-
+import Loader from '@/app/feedBackComponent/Loader/page'
 
 
 export default function HomePage() {
@@ -81,6 +81,7 @@ export default function HomePage() {
       <Link href={"/bounced"}>bounced</Link>
       <Alert />
       <Link href={"/NavigationComponent/navBar"}>bounced</Link>
+      <Loader />
     </Container>
   );
 }
