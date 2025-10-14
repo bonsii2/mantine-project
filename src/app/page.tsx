@@ -14,6 +14,8 @@ import Skeleton from '@/app/feedBackComponent/skeleton/page'
 import UseDisclosure from '@/app/CustomHooks/useDisclosure/page'
 import UseHotKeys from '@/app/CustomHooks/useHotKeys/page'
 import UseClipBoard from '@/app/CustomHooks/UseClipBoard/page'
+import UseclickOutside from '@/app/CustomHooks/useClickOutSide/page'
+import ColorScheme from '@/app/CustomHooks/useColorScheme/page'
 
 export default function HomePage() {
   const handleClick = () => {
@@ -92,6 +94,8 @@ export default function HomePage() {
       <UseDisclosure />
       <UseHotKeys />
       <UseClipBoard />
+      <UseclickOutside />
+      <ColorScheme />
     </Container>
   );
 }
