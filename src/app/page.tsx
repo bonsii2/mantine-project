@@ -6,6 +6,7 @@ import Demo from "./components/Demo";
 import { Icon } from "lucide-react";
 import { ActionIcon, CloseButton } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
+import  Alert  from "@/app/feedBackComponent/alert/page";
 
 
 
@@ -30,7 +31,8 @@ export default function HomePage() {
       <Group>
         <Button color="blue" radius="md">
           default
-        </Button>git
+        </Button>
+        git
         <Button color="blue" variant="outline" radius="md">
           add item
         </Button>
@@ -46,10 +48,9 @@ export default function HomePage() {
           delete
         </Button>
         <Button onClick={handleClick}>notification</Button>
-
         <Button loading>savin..g</Button>
       </Group>
-      <Paper shadow="sm"  radius="md" p="lg" withBorder>
+      <Paper shadow="sm" radius="md" p="lg" withBorder>
         <Group justify="space-between">
           <Text fw={600}>How to build a great UI with Mantine</Text>
           <CloseButton aria-label="Close post" />
@@ -76,10 +77,10 @@ export default function HomePage() {
       </Paper>
       <Demo />
       <Link href={"/appshell"}>App shale</Link>
-      <Link href={'/formPage'}>form page</Link>
-      <Link href={'/bounced'}>bounced</Link>
-      <Link href={'/NavigationComponent/navBar'}>bounced</Link>
-
+      <Link href={"/formPage"}>form page</Link>
+      <Link href={"/bounced"}>bounced</Link>
+      <Alert />
+      <Link href={"/NavigationComponent/navBar"}>bounced</Link>
     </Container>
   );
 }

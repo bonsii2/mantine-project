@@ -16,9 +16,7 @@ export default function RootLayout({
       <body>
         <MantineProvider>
           <Notifications position="bottom-right"
-          limit={3}
-          containerWidth={320}
-          zIndex={99999} />
+          />
           {children}
         </MantineProvider>
       </body>
