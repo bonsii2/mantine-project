@@ -12,6 +12,7 @@ import LoadingOverlay from '@/app/feedBackComponent/LoadingOverlay/page'
 import Progress from '@/app/feedBackComponent/Progress/page'
 import Skeleton from '@/app/feedBackComponent/skeleton/page'
 import UseDisclosure from '@/app/CustomHooks/useDisclosure/page'
+import UseHotKeys from '@/app/CustomHooks/useHotKeys/page'
 
 export default function HomePage() {
   const handleClick = () => {
@@ -24,7 +25,7 @@ export default function HomePage() {
   })
   }
   return (
-    <Container size={'100%'} py="xl">
+    <Container size={"100%"} py="xl">
       <Title order={2}>Hello Mantine + Next.js (App Router) 👋</Title>
       <Button mt="md" color="blue" onClick={() => alert("Button clicked")}>
         Click me
@@ -84,10 +85,11 @@ export default function HomePage() {
       <Alert />
       <Link href={"/NavigationComponent/navBar"}>bounced</Link>
       <Loader />
-      <LoadingOverlay/>
+      <LoadingOverlay />
       <Progress />
       <Skeleton />
       <UseDisclosure />
+      <UseHotKeys />
     </Container>
   );
 }
