@@ -9,6 +9,7 @@ import { notifications } from "@mantine/notifications";
 import  Alert  from "@/app/feedBackComponent/alert/page";
 import Loader from '@/app/feedBackComponent/Loader/page'
 import LoadingOverlay from '@/app/feedBackComponent/LoadingOverlay/page'
+import Progress from '@/app/feedBackComponent/Progress/page'
 
 
 export default function HomePage() {
@@ -83,6 +84,7 @@ export default function HomePage() {
       <Link href={"/NavigationComponent/navBar"}>bounced</Link>
       <Loader />
       <LoadingOverlay/>
+      <Progress />
     </Container>
   );
 }
