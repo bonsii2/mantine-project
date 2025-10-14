@@ -13,6 +13,7 @@ import Progress from '@/app/feedBackComponent/Progress/page'
 import Skeleton from '@/app/feedBackComponent/skeleton/page'
 import UseDisclosure from '@/app/CustomHooks/useDisclosure/page'
 import UseHotKeys from '@/app/CustomHooks/useHotKeys/page'
+import UseClipBoard from '@/app/CustomHooks/UseClipBoard/page'
 
 export default function HomePage() {
   const handleClick = () => {
@@ -90,6 +91,7 @@ export default function HomePage() {
       <Skeleton />
       <UseDisclosure />
       <UseHotKeys />
+      <UseClipBoard />
     </Container>
   );
 }
