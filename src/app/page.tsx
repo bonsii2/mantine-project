@@ -10,7 +10,7 @@ import  Alert  from "@/app/feedBackComponent/alert/page";
 import Loader from '@/app/feedBackComponent/Loader/page'
 import LoadingOverlay from '@/app/feedBackComponent/LoadingOverlay/page'
 import Progress from '@/app/feedBackComponent/Progress/page'
-
+import Skeleton from '@/app/feedBackComponent/skeleton/page'
 
 export default function HomePage() {
   const handleClick = () => {
@@ -85,6 +85,7 @@ export default function HomePage() {
       <Loader />
       <LoadingOverlay/>
       <Progress />
+      <Skeleton />
     </Container>
   );
 }
